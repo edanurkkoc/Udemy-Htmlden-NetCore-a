@@ -1,0 +1,275 @@
+<!-- rgba:a alfa,opasity değerini belirtir -->
+<!-- hsla: hsla(0,0,0,a)a alfa,opasity değerini belirtir -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS TEKRAR</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <style>
+      header ul li > a {
+        background-color: bisque;
+      }
+      #section1 a {
+        text-decoration: none;
+        /* renk değeri,doygunluk,parlaklık */
+        background-color: hsl(0, 71%, 50%);
+      }
+    </style>
+    <!--CSS  SELECTOR -->
+    <header>
+      <ul>
+        <li><a href="#">Ana Sayfa</a></li>
+        <li><a href="#">Hakkımızda</a></li>
+      </ul>
+    </header>
+    <div id="section1">
+      <h2>Başlik 1</h2>
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur
+        maiores iusto, soluta hic voluptas voluptatum voluptates distinctio
+        vitae quidem exercitationem! Repellendus vitae aliquam voluptatem
+        facilis architecto assumenda, doloremque inventore itaque
+      </p>
+      <a href="#">TIKLA</a>
+    </div>
+    <div id="section1">
+      <h2>Başlik 2</h2>
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur
+        maiores iusto, soluta hic voluptas voluptatum voluptates distinctio
+        vitae quidem exercitationem! Repellendus vitae aliquam voluptatem
+        facilis architecto assumenda, doloremque inventore itaque
+      </p>
+    </div>
+    <div id="section1">
+      <h2>Başlik 3</h2>
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur
+        maiores iusto, soluta hic voluptas voluptatum voluptates distinctio
+        vitae quidem exercitationem! Repellendus vitae aliquam voluptatem
+        facilis architecto assumenda, doloremque inventore itaque
+      </p>
+    </div>
+
+    <!-- BACKGROUND İMAGE -->
+
+    <style>
+      .div-image {
+        width: 400px;
+        height: 100px;
+        background-repeat: repeat-x;
+        background-image: url(doğa.jpg);
+        background-position: center;
+        background-size: contain;
+      }
+      .div-repeat {
+        width: 250px;
+        height: 250px;
+        background-image: url(doğa.jpg);
+        background-repeat: repeat-x;
+        background-position: center center;
+        background-size: cover;
+      }
+      .img-size {
+        width: 300px;
+        height: 300px;
+        /* object-fit: cover; */
+        object-fit: fill;
+        object-fit: contain;
+      }
+    </style>
+    <div class="div-image"></div>
+    <div class="div-repeat"></div>
+    <img src="doğa.jpg" alt="" class="img-size" />
+    <!-- BORDER AND BORDER RADİUS -->
+    <!-- solid :hafif renk geçişli düz çizgili çerçeve -->
+    <!-- dotted:geçişli çizgili bir çerçeve yapar -->
+    <!-- dashed:daha kalın geçişli çizgili bir çerçeve yapar -->
+    <!-- double:çift çizgili bir çerçeve yapar -->
+    <!-- grove:dışı siyahlaştırır çizgili bir çerçeve yapar -->
+    <!-- ridge:içi siyahlaştırır çizgili bir çerçeve yapar -->
+    <!-- inset:gölgelendirme içe doğru bir çerçeve yapar -->
+    <!-- outset:gölgelendirme dışa doğru bir çerçeve yapar -->
+    <!-- none:çerçeve gözükmezz -->
+    <!-- hidden:çerçeve gözükmezz  -->
+    <style>
+      .border-only {
+        border: 1px solid black;
+        text-align: center;
+      }
+      .radius-only {
+        background-color: black;
+        color: aliceblue;
+        border-radius: 20px;
+        text-align: center;
+      }
+      .border-and-radius {
+        text-align: center;
+        background-color: brown;
+        color: white;
+        border: 4px solid green;
+        border-radius: 5px;
+      }
+      .full-rounded {
+        width: 250px;
+        height: 250px;
+        text-align: center;
+        background-color: brown;
+        color: white;
+        border: 4px solid green;
+        border-radius: 50% 50% 50% 50%;
+      }
+    </style>
+    <div class="border-only">Sadece Çerçeve</div>
+    <div class="radius-only">Sadece</div>
+    <div class="border-and-radius">Sadece Çerçeve</div>
+    <div class="full-rounded">Tam Yuvarlak</div>
+    <!-- MARGİN VE BOTTOM -->
+    <!-- margin:üst sağ alt sol -->
+    <!-- ----------------------------------------------------- -->
+    <!-- PSEUDO -->
+    <style>
+      a:visited {
+        color: rgb(21, 118, 21);
+      }
+      input:focus {
+        background-color: aquamarine;
+      }
+    </style>
+    <a href="#">HOVER ÜZERİME GEL</a>
+    <input type="text" placeholder="Focus İçin Tıkla" />
+
+    <!-- OVERFLOW:Bir metnin içeriği belirlenen boyutları aştığında  nasıl bir işlem yapıcaz-->
+      
+    <style>
+        .container{
+            width: 200px;
+            height: 200px;
+            margin-bottom: 70px;
+            border:1px solid black;
+
+        }
+        /* taşan içeriğin görünmesine izin verir */
+        .visible{
+            overflow: visible;;
+        }
+        /* taşan yerleri gizle */
+        .hidden{
+            overflow: hidden;
+        }
+        /* taşan yerleri scrolla */
+        .scroll{
+            overflow: scroll;
+        }
+        /* taşan yerleri otomatik olarak scrolla, */
+        .auto{
+            overflow: auto;
+        }
+    </style>
+    <div class="container visible">
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+            Dolore autem quibusdam a quam, voluptates sapiente aspernatur 
+            mollitia. Aspernatur aliquid atque excepturi 
+            eum eveniet? Quibusdam labore hic, odio consequatur repudiandae ut.
+        </p>
+      </div>
+      <div class="container hidden">
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+            Dolore autem quibusdam a quam, voluptates sapiente aspernatur 
+            mollitia. Aspernatur aliquid atque excepturi 
+            eum eveniet? Quibusdam labore hic, odio consequatur repudiandae ut.
+        </p>
+      </div>
+      <div class="container scroll">
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+            Dolore autem quibusdam a quam, voluptates sapiente aspernatur 
+            mollitia. Aspernatur aliquid atque excepturi 
+            eum eveniet? Quibusdam labore hic, odio consequatur repudiandae ut.
+        </p>
+      </div>
+      <div class="container auto">
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+            Dolore autem quibusdam a quam, voluptates sapiente aspernatur 
+            mollitia. Aspernatur aliquid atque excepturi 
+            eum eveniet? Quibusdam labore hic, odio consequatur repudiandae ut.
+        </p>
+      </div>
+      <!-- RESPONSİVE -->
+       <style>
+        body{
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        header,nav,main,footer{
+            padding: 20px;
+            text-align: center;
+        }
+        nav ul{
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li{
+            display: inline;
+            margin-right: 10px;
+        }
+        @media (max-width:600px){
+            nav ul li{
+                display: block;
+                margin-right: 0;
+            }
+            body{
+                background-color: aquamarine;
+            }
+        }
+        @media (min-width:601px) and (max-width:1024px){
+            body{
+                background-color: lightcoral;
+            }
+            h1{
+                display: none;;
+            }
+        }
+        @media (min-width:1025px) and (max-width:1024px){
+            body{
+                background-color: rgb(26, 141, 45);
+            }
+          
+        }
+       </style>
+       <header>
+        <h1>Responsive Tasarım</h1>
+       </header>
+       <nav>
+        <ul>
+            <li><a href="#">AnaSayfa</a></li>
+            <li><a href="#">Hakkımda</a></li>
+            <li><a href="#">Servisler</a></li>
+            <li><a href="#">İletişim</a></li>
+        </ul>
+       </nav>
+       <main>
+        <section>
+            <h2>Hoş Geldiniz!</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Sit fugit culpa adipisci quibusdam dignissimos autem, quisquam 
+                repellat, debitis delectus, doloribus
+                 libero. Aut aperiam et vel asperiores veritatis? Quos, 
+                 nisi maxime?
+            </p>
+        </section>
+       </main>
+       <footer>
+        <p>copy:2024 Tüm Hakları Saklıdır</p>
+       </footer>
+  </body>
+</html>

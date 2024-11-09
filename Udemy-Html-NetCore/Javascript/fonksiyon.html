@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fonksiyon ve Döngüler</title>
+</head>
+<body>
+    <script>
+    // <!-- OPERATÖRLER -->
+
+// <!-- Ternirery -->
+    //   let age=18
+    //   let status=(age>=18) ? "Yetişkin" : "Çocuk"
+    //   console.log(status)
+
+    //   acil olan fonksiyonları çağırma biçimi
+    (function(){
+        console.log("Bu bir IIEF fonksiyonudur")
+    })();
+
+    // anonim fonksiyon
+    setTimeout(function(){
+        console.log("Bu bir setTimeout fonksiyonudur")
+    },2000)
+
+    // scopelar (global ve local)
+
+    let color="blue"
+
+    function setColor(){
+        var color2="red";  //fonks içindeki değişk. var ile tanımlanır
+    }
+
+    console.log(color2)
+
+
+    //BLOCK SCOPE,fonks ile karşılaştırılmamalıdır
+
+    if(true){
+        let color="blue"
+        console.log(color)
+    }
+
+    </script>
+
+     
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <h1 id="title">Başlık</h1>
+
+    <ul id="list">
+        <li>Liste Ögesi 1</li>
+        <li>Liste Ögesi 2</li>
+        <li>Liste Ögesi 3</li>
+    </ul>
+
+    <button id="changeTitle"> Başlığı değiştir</button>
+    <button id="newElement"> Yeni Element Ekle</button>
+    <button id="removeElement"> Listenden Eleman Sil</button>
+
+    <script>
+        document.getElementById("changeTitle").addEventListener('click',function(){
+            let title=document.getElementById('title')
+            title.textContent='Yeni Başlık'
+            title.style.color='blue'
+        })
+
+        document.getElementById('newElement').addEventListener('click',function(){
+            let newElement=document.createElement('p')
+            newElement.textContent='Bu bir yeni paragraftır'
+            document.body.appendChild(newElement)
+        })
+
+        //silme işlemi
+
+        document.getElementById('removeElement').addEventListener('click',function(){
+            let title=document.getElementById('list')
+            if(list.children.length>0){
+                list.removeChild(list.children[0])
+            }
+            else{
+                    alert('Listede silinecek eleman kalmadı')
+            }
+        })
+    </script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+</head>
+<body>
+    
+    <!-- Console Uyarıları -->
+     <script>
+        console.log("selam")
+        console.error("Bu bir hata mesajıdır")
+        console.warn("Bu bir uyarı mesajıdır")
+        console.info("Bu bir bilgi mesajıdır")
+
+        // kullanıcıya bir mesaj kutusu gösterir,kullanıcı sayfayı kapatana kadar ekranda gösterir
+
+        alert("Bu bir alert kutusudur!")
+
+        // veriyi tablo halinde gösterir
+        console.table([{ad:"Eda",yaş:21},{ad:"Seda",yaş:12}])
+
+        // verileri grupl<andırma
+        console.group("Kullanıcı Detayları")
+        console.log("Ad: Eda")
+        console.log("Yaş:21")
+        console.groupEnd()
+
+// false mesajı döndürme
+        console.assert(1===2,"Burası yanlış,1 eşit değildir 2'ye")
+     </script>
+</body>
+</html>

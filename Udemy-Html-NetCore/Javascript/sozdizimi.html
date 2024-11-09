@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript</title>
+  </head>
+  <body>
+    <script>
+      // var,let,const değişkenleri
+      var oldVariable = "Eski tanımlama";
+      let newVariable = "Yeni tanımlama";
+      const constantVariable = "sabit değer";
+
+      // değişkenin tipini öğrenmek için
+      console.log(typeof oldVariable);
+
+      // değişkeni birbirine dönüştürme
+      let integerString = "123";
+      let numberFromString = Number(integerString);
+      console.log(numberFromString); //123
+      console.log(integerString); //123
+
+      let deneme = "123";
+      let numberFromString1 = deneme.toString();
+      console.log(typeof numberFromString1); //123
+
+      console.log(10 == "10"); //true
+      console.log(10 === "10"); //false
+
+      // METODLAR
+      console.log(Math.round(4.7)); //yapılan işlemi en yakına döndür
+      console.log(Math.ceil(4.1)); //5 kendinden sonraki tam sayıya yuvarlar
+      console.log(Math.floor(4.9)); //4 kendinden önceki tam sayıya yuvarlar(4.9)) //4 kendinden önceki tam sayıya yuvarlar
+      console.log(Math.random()); //random sayı üretir
+      console.log(Math.floor(Math.random() * 10) + 1);
+
+      console.log(Math.max(10, 56, 25, 44, 0));
+      console.log(Math.min(10, 56, 25, 44, 0));
+
+      // STRİNG DİZİLER
+      let exampleString = "Hello World";
+
+      console.log(exampleString.toUpperCase());
+      console.log(exampleString.toLowerCase());
+      console.log(exampleString.slice(0, 7));
+      console.log(exampleString.split("")); //diziye çevirir
+
+      //TEMPLATE TRİBBLE
+
+      let ad = "Eda";
+      let mesaj = `Merhaba ${ad}`;
+      console.log(mesaj);
+
+      // DİZİLER (ARRAY) =>Sıralı listeyi saklamamıza yardımcı olur
+      let fruits = ["Apple", "Banana", "water", "cola"];
+      let count = fruits.push("Orange"); //dizinin sonuna ekle
+      let last = fruits.pop(); //dizinin sonundaki elemanı kaldırır
+      let first = fruits.shift(); //dizinin başındaki elemanı kaldırır
+      let newLenght = fruits.unshift("Apple"); //dizinin başına ekler
+      let citrus = fruits.slice(1, 3); //1,2 yani 3 dahil değil
+      console.log(citrus);
+      console.log(fruits);
+
+      //NESNELER
+      let araba = {
+        marka: "Toyota",
+        model: "Camry",
+        yil: 2020,
+        fiyat: 250000,
+        renk: "Siyah",
+      };
+      console.log(araba.marka);
+
+      //NESNELER TARİHLER
+      let now = new Date();
+      console.log(now.getFullYear());
+      console.log(now.getMonth() + 1);
+      console.log(now.getDate());
+      console.log(now.getHours());
+      console.log(now.getMinutes());
+      console.log(now.getSeconds());
+      console.log(now.getDay()); //0-6
+    </script>
+  </body>
+</html>

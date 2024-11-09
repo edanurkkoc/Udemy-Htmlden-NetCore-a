@@ -1,0 +1,165 @@
+<!-- autoplay tarayıcıda kısıtlandığı için ses otomatik başlamadı -->
+<!-- muted:yüklendiği zmn ses olmaz -->
+<!-- loop:bittiği zmn başa sarar -->
+ <!-- value:backende değerleri göndermek için -->
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <!-- META ETİKETLERİ -->
+     <meta name="description" content="1 Saatte HTML Öğren">
+     <meta name="keywords" content="html,websitesi">
+     <meta name="author" content="Edanur Kocakoç">
+     <meta name="viewport" content="widt=device-width,initial-scale=1.0">
+     <!--web sitenin kaç saniyede bir yenileneceğini gösterir  -->
+     <!-- <meta http-equiv="refresh" content="1">  -->
+
+
+
+
+    <title>
+      Bu Site Html Bilgisini Pekiştirmek İçin Yazılmış Bir One-Page Sitesidir
+    </title>
+  </head>
+  <body>
+    <!-- İFRAME:Web sayfasında başka bir web sayfasının gösterilmesine yarar(reklam,dolandırıcılık vs) -->
+     <iframe src="https://www.wikipedia.org" frameborder="0" width="600" height="400"></iframe>
+     <iframe src="./form.html" frameborder="2" width="600" height="400"></iframe>
+    <!-- VİDEO -->
+    <video
+      src="./video/video.mp4"
+      width="500px"
+      height="500px"
+      controls
+      autoplay
+      muted
+      loop
+    ></video>
+    <!-- SES -->
+    <audio
+      src="./music/mixaund-motivate-me.mp3"
+      autoplay
+      controls
+      muted
+      loop
+    ></audio>
+    <!-- METİN BİÇİMLENDİRME -->
+    <p>Bu Normal Bir Yazı</p>
+    <p>Bu <b>Kalın</b> Bir Yazı</p>
+    <p>Bu <i>İtalic</i> Bir Yazı</p>
+    <p>Bu <big>Büyük</big> Bir Yazı</p>
+    <p>Bu <small>Küçük</small> Bir Yazı</p>
+    <p>Bu <sub>Alt Sembol</sub> Bir Yazı</p>
+    <p>Bu <sup>Üst Sembol</sup> Bir Yazı</p>
+    <p>Bu <ins>Altı Çizili</ins> Bir Yazı</p>
+    <p>Bu <del>Üstü Çizili</del> Bir Yazı</p>
+    <p>Bu <mark>Fosforlu</mark> Bir Yazı</p>
+
+    <!-- LİSTE ELEMANLARI -->
+    <h3>Sırasız Liste</h3>
+    <ul>
+      <li>Süt</li>
+      <li>Tavuk</li>
+      <li>Kahvaltılık</li>
+      <ul>
+        <li>Zeytin</li>
+        <li>Peynir</li>
+      </ul>
+    </ul>
+    <h3>Sıralı Liste</h3>
+    <ol type="A">
+      <li>Tavamızı Isıtalım</li>
+      <li>Tavamızı Isıtalım</li>
+      <li>Tavamızı Isıtalım</li>
+    </ol>
+    <h3>Açılama Listesi</h3>
+    <dt>HTML</dt>
+    <dd>Web sitesinin elemanlarını göstermeye yarar.</dd>
+
+    <!-- TABLO -->
+     <h3>Açılış Saatleri</h3>
+    <table style="background-color: black;width: 560px;">
+      <tr style="background-color: cadetblue;" >
+        <th style="width: 80px;">Pazartesi</th>
+        <th style="width: 80px;">Salı</th>
+        <th style="width: 80px;">Çarşamba</th>
+        <th style="width: 80px;">Perşembe</th> 
+        <th style="width: 80px;">Cuma</th> 
+        <th style="width: 80px;">Cumartesi</th> 
+        <th style="width: 80px;">Pazar</th> 
+      </tr>
+
+      <tr  style="font-size: 12px;text-align: center;background-color: rgb(59, 123, 102);">
+        <td>09:00-17:00</td>
+        <td>09:00-17:00</td>
+        <td>09:00-17:00</td>
+        <td>09:00-17:00</td>
+        <td>09:00-17:00</td>
+        <td>Kapalı</td>
+        <td>Kapalı</td>
+      </tr>
+    </table>
+    <!-- SPAN-DİV -->
+     <p>Span :inline</p>
+     <p>Div :block</p>
+     <span style="background-color: red;">BU BİR SPAN ETİKETİDİR</span>
+     <div style="background-color: green;">BU BİR DİVETİKETİDİR</div>
+     <!-- BUTON EKLEME -->
+      <!-- <a href="https://www.google.com"><button >TIKLA</button></a> -->
+       <div  style="background-color: blueviolet; color: aquamarine; " >
+        <button onclick="tikla()" style="width: 50%;background-color: cadetblue;  margin-left: 400px;">TIKLA</button>
+        <p id="yazi">Butona Bas</p>
+       </div>
+
+      <script>
+        function tikla(){
+            document.getElementById("yazi").innerHTML="Butona Bastınız"
+        }
+      </script>
+
+
+            <!-- FORM -->
+             <form action="">
+                <label for="name">Ad:</label>
+                <input type="text" name="isim" id="name" placeholder="Ad:">
+                    <br> <br>
+                <label for="surname">Soyad:</label>
+                <input type="text" name="soyad" id="surname" placeholder="Soyad:">
+                <br> <br>
+                <label for="password">Şifre:</label>
+                <input type="password" name="şifre" id="password" maxlength="15">
+                <br><br>
+                <label for="email">Email:</label>
+                <input type="email" name="email " id="email">
+                <br><br>
+                <label for="tarih">Doğum Tarihi</label>
+                <input type="date" name="date" id="tarih">
+                <br><br>
+                <label for="sayi">Kardeş Sayısı</label>
+                <input type="number" name="kardeş sayi" id="sayi" min="0" max="30">
+                <br><br>
+                <label for="cinsiyet">Cinsiyet:</label>
+                <label for="kadin">Kadın</label>
+                <input type="radio" name="cinsiyet" id="kadin" value="kadin">
+                <label for="kadin">Erkek</label>
+                <input type="radio" name="cinsiyet" id="kadin" value="erkek">
+                <br><br>
+                <select name="" id="">
+                    <option value="ssk">SSK</option>
+                    <option value="bagkur">BAĞKUR</option>
+                    <option value="emekli">EMEKLİ SANDIĞI</option>
+                </select>
+                <br><br>
+                <label for="">Aktif Olarak Çalışıyor</label>
+                <input type="checkbox">
+                <br><br>
+                <textarea name="" id="" cols="15" rows="5"></textarea>
+                <br><br>
+                <input type="file" accept=".pdf">
+                <br><br>
+                <input type="reset">
+                <input type="submit">
+             </form>
+  </body>
+</html>
